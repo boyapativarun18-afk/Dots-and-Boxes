@@ -1,0 +1,311 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #000000;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.025em;
+    color: #000000;
+  }
+}
+
+/* Clean Brutalism Utilities */
+.shadow-brutal-xs {
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.shadow-brutal {
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.shadow-brutal-lg {
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.shadow-brutal-white {
+  box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 1);
+}
+
+.shadow-brutal-cyan {
+  box-shadow: 4px 4px 0px 0px #06b6d4;
+}
+
+.shadow-brutal-rose {
+  box-shadow: 4px 4px 0px 0px #f43f5e;
+}
+
+.shadow-brutal-amber {
+  box-shadow: 4px 4px 0px 0px #f59e0b;
+}
+
+/* Tactile Brutalist Interactive Press */
+.btn-brutal {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn-brutal:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px 0px #000000;
+}
+
+.btn-brutal:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px #000000;
+}
+
+/* Subtle Architectural Grid Pattern */
+.bg-architectural-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+}
+
+.bg-architectural-grid-dark {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.3;
+  }
+  70% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes dotPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(1.28);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes dotPopEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.36);
+  }
+  85% {
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes hLineEntrance {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scaleX(1.08);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes vLineEntrance {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scaleY(1.08);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes lineFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes boardPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.98) translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: center;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.16s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-board-pop {
+  animation: boardPop 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes scorePop {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.38) translateY(-2px);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes scoreGainFloat {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(0.9);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-6px) scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-18px) scale(0.85);
+  }
+}
+
+.animate-score-pop {
+  animation: scorePop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  display: inline-block;
+  transform-origin: center;
+}
+
+.animate-score-gain {
+  animation: scoreGainFloat 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes victoryAuraRotate {
+  from {
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, 0) rotate(360deg);
+  }
+}
+
+@keyframes victoryFloatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) rotate(0deg) scale(0.6);
+  }
+  20% {
+    opacity: 0.95;
+  }
+  80% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-130px) rotate(220deg) scale(1.1);
+  }
+}
+
+@keyframes trophyPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(12px) rotate(-14deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.22) translateY(-4px) rotate(6deg);
+  }
+  75% {
+    transform: scale(0.95) translateY(0) rotate(-2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0) rotate(0deg);
+  }
+}
+
+.animate-trophy-pop {
+  animation: trophyPop 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.animate-aura-spin {
+  animation: victoryAuraRotate 20s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-board-pop,
+  .animate-scale-in,
+  .animate-fade-in,
+  .animate-score-pop,
+  .animate-score-gain,
+  .animate-trophy-pop,
+  .animate-aura-spin,
+  .btn-brutal {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition: none !important;
+  }
+}

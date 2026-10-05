@@ -1,0 +1,6 @@
+{
+  "name": "Dots & Boxes",
+  "description": "Connect. Complete. Conquer. A modern, premium Dots & Boxes game featuring strategic AI, local multiplayer, themes, and sound effects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
